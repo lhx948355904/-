@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="title">
+				<p>这是使用nativeObj 原生控件绘制的底部选项卡示例，当前为父页面，显示第一个tab项内容；</p>
+				<p>这里采用将第一个tab项内容放在父页面显示，因为是入口页面，会在启动中进行渲染，使首页显示速度更快</p>
+				<p>选项卡常用于App首页，为加快渲染，原生底部选项卡是在manifest.json中通过plus -> launchwebview -> subNViews 节点配置的；</p>
+				<p>选项卡图标使用字体绘制，点击可切换对应选项卡的高亮状态，开发者可自定义相应的点击事件；</p>
+				<p>本示例中，点击第二个选项卡打开一个支持下拉刷新的webview；点击第四个选项卡，打开一个新窗口。</p>
+
+				<p>中间悬浮大球图标，因涉及屏幕分辨率动态计算，目前是在首页plusReady事件中实现绘制的。该悬浮大球支持点击事件，开发者可定制实现对应的点击逻辑。</P>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/util.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+			(function() {
+				mui.init({
+					swipeBack: true //启用右滑关闭功能
+				});
+				mui.plusReady(function() {
+					var self = plus.webview.currentWebview(); // 设置凸起大图标为水平居中
+
+
+					// 创建子webview窗口 并初始化
+					var aniShow = {};
+					util.initSubpage(aniShow);
+					
+					var 	nview = plus.nativeObj.View.getViewById('tabBar'),
+						activePage = plus.webview.currentWebview(),
+						targetPage,
+						subpages = util.options.subpages,
+						pageW = window.innerWidth,
+						currIndex = 0;
+					
+						
+					/**
+					 * 根据判断view控件点击位置判断切换的tab
+					 */
+					nview.addEventListener('click', function(e) {
+						
+						
+						var clientX = e.clientX;
+						
+						console.log(clientX,pageW)
+						
+						if(clientX > 0 && clientX <= parseInt(pageW * 0.20)) {
+							currIndex = 0;
+						} else if(clientX > parseInt(pageW * 0.20) && clientX <= parseInt(pageW * 0.40)) {
+							currIndex = 1;
+						} else if(clientX > parseInt(pageW * 0.40) && clientX <= parseInt(pageW * 0.60)) {
+							currIndex = 2;
+						} else if(clientX > parseInt(pageW * 0.60) && clientX <= parseInt(pageW * 0.80)) {
+							currIndex = 3;
+						} else {
+							currIndex = 4;
+						}
+						
+						// 匹配对应tab窗口	
+						if(currIndex > 0) {
+							targetPage = plus.webview.getWebviewById(subpages[currIndex - 1]);
+						} else {
+							targetPage = plus.webview.currentWebview();
+						}
+						
+
+						
+						if(targetPage == activePage) {
+							return;
+						}
+
+						//底部选项卡切换
+						util.toggleNview(currIndex);
+						// 子页面切换
+						util.changeSubpage(targetPage, activePage, aniShow);
+						//更新当前活跃的页面
+						activePage = targetPage;
+					});
+				});
+			})();
+		</script>
+</html>

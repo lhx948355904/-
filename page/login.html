@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<script type="text/javascript" src="../js/flexible.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<script type="text/javascript" src="">
+		</script>
+		<style type="text/css">
+						* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html {
+				height: 100%;
+			}
+			
+			body {
+				width: 100%;
+				height: 100%;
+				background-image: url(../img/bj.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				padding-top: 0.0999px;
+			}
+			
+			div.top {
+				width: 100%;
+				margin-top: 1.7568rem;
+				text-align: center;
+			}
+			
+			img {
+				width: 25%;
+				height: 25%;
+			}
+			
+			p {
+				/*margin-left: 13%;*/
+				width: 100%;
+				color: #FFFFFF;
+				font-size: 0.97rem;
+			}
+			
+			input {
+				width: 100%;
+				padding: 0.2703rem 0 0.1351rem 0;
+				background: none;
+				outline: none;
+				border: 0;
+				border-bottom: 0.027rem solid #FFFFFF;
+				font-size: 0.5rem;
+			}
+			
+			input::placeholder {
+				color: rgba(255, 255, 255, 0.5);
+			}
+			
+			div.middle {
+				margin-top: 2.027rem;
+				padding: 0 1.4865rem;
+			}
+			
+			.middle>p {
+				font-size: 0.58rem;
+			}
+			
+			.middle>p.pwd {
+				margin-top: 0.5405rem;
+			}
+			
+			div.bottom {
+				text-align: center;
+				width: 70%;
+				height: 1.4865rem;
+				margin-top: 2.4324rem;
+				margin-left: 1.4865rem;
+				border-radius: 1.027rem;
+				line-height: 1.4865rem;
+				background-color: rgba(255, 255, 255, 0.3);
+				font-size: 0.75rem;
+				color: #FFFFFF;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="top">
+			<table></table>
+			<img src="../img/logo.png" />
+			<p>智慧水务系统</p>
+		</div>
+		<div class="middle">
+			<p>用户名/邮箱</p>
+			<input type="text" placeholder="qiantu@mail.com" />
+			<p class="pwd">密码</p>
+			<input type="password" placeholder="******" />
+
+		</div>
+		<div class="bottom">
+			登录
+		</div>
+	</body>
+
+</html>
