@@ -7,6 +7,14 @@ class Index{
 		this.initMui();
 	}
 	
+	initEvent(){
+		document.querySelectorAll(".mui-table-view").forEach((e)=>{
+			e.onclick = () => {
+				
+			}
+		})
+	}
+	
 	initMui(){
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
