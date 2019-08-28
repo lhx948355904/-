@@ -1,44 +1,204 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css" />
+		<link rel="stylesheet/less" type="text/css" href="less/details.less" />
+		<script src="../../js/less.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
 	</head>
+
 	<body>
-		<div class="mui-content">
+		<div class="mui-content indexDetails">
 			
+			<header class="mui-bar mui-bar-nav mui-bar-nav-bg">
+			    <a id="icon-menu" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">设备中心</h1>
+			</header>
+
 			<div id="sliderSegmentControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-                <a class="mui-control-item mui-active" href="#item1mobile">
-                    全部订单
-                </a>
-                <a class="mui-control-item" href="#item2mobile">
-                    待付款
-                </a>
-                <a class="mui-control-item" href="#item3mobile">
-                    待收货
-                </a>
-                <a class="mui-control-item" href="#item4mobile">
-                    待评价
-                </a>
-            </div>
-            
-            <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3" ></div>
-            
-            <div class="mui-slider-group">
-                <div id="item1mobile" class="md-f1 mui-slider-item mui-control-content detailInfos md-box md-ver mui-active">
-                    全部订单
-                </div>
-                <div id="item2mobile" class="bg md-f1 mui-slider-item mui-control-content detailInfos1 md-box md-ver">
-                    待付款     
-                </div> 
-                <div id="item3mobile" class="bg md-f1 mui-slider-item mui-control-content detailInfos2 md-box md-ver">
-                        待收货    
-                </div> 
-                <div id="item4mobile" class="bg md-f1 mui-slider-item mui-control-content detailInfos2 md-box md-ver">
-                        待评价    
-                </div>  
+				<a class="mui-control-item mui-active" href="#item1">
+					组态
+				</a>
+				
+				<a class="mui-control-item" href="#item2">
+					当前报警
+				</a>
+				
+				<a class="mui-control-item" href="#item3">
+					历史报警
+				</a>
+				
+				<a class="mui-control-item" href="#item4">
+					历史数据
+				</a>
+				
+				<a class="mui-control-item" href="#item5">
+					基本信息
+				</a>
 			</div>
-			
+
+			<div id="sliderProgressBar" class="mui-col-xs-2"></div>
+
+			<div class="mui-slider-group">
+				<div id="item1" class="md-f1 mui-slider-item mui-control-content detailInfos md-box md-ver mui-active">
+					全部订单
+				</div>
+				<div id="item2" class="bg md-f1 mui-slider-item mui-control-content detailInfos1 md-box md-ver">
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>设备编号</span>
+					    	<span>F1235DS</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警时间</span>
+					    	<span>2019年8月28日 22:21:47</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警类型</span>
+					    	<span>温度过高</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警级别</span>
+					    	<span>4</span>
+					    </li>
+					</ul>
+				</div>
+				<div id="item3" class="bg md-f1 mui-slider-item mui-control-content detailInfos2 md-box md-ver">
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>设备编号</span>
+					    	<span>F1235DS</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警时间</span>
+					    	<span>2019年8月28日 22:21:47</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警类型</span>
+					    	<span>温度过高</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警级别</span>
+					    	<span>4</span>
+					    </li>
+					</ul>
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>设备编号</span>
+					    	<span>F1235DS</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警时间</span>
+					    	<span>2019年8月28日 22:21:47</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警类型</span>
+					    	<span>温度过高</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>报警级别</span>
+					    	<span>4</span>
+					    </li>
+					</ul>
+				</div>
+				<div id="item4" class="bg md-f1 mui-slider-item mui-control-content detailInfos3 md-box md-ver">
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>数据源</span>
+					    	<select class="mui-h5">
+								<option value="">全部状态</option>
+								<option value="1">津</option>
+								<option value="1">冀</option>
+							</select>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>数据名称</span>
+					    	<select class="mui-h5">
+								<option value="">全部状态</option>
+								<option value="1">津</option>
+								<option value="1">冀</option>
+							</select>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>选择通道</span>
+					    	<select class="mui-h5">
+								<option value="">全部状态</option>
+								<option value="1">津</option>
+								<option value="1">冀</option>
+							</select>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>开始时间</span>
+					    	<span>2019年8月28日 22:52:09</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>设备分组</span>
+					    	<span>2019年8月28日 22:52:09</span>
+					    </li>
+					</ul>
+					
+				</div>
+				<div id="item5" class="bg md-f1 mui-slider-item mui-control-content detailInfos4 md-box md-ver">
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>设备名称</span>
+					    	<span>温控网关仪</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>设备型号</span>
+					    	<span>温控仪</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>设备模版</span>
+					    	<span>温控仪</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>设备序列号</span>
+					    	<span>1233513241234</span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>设备分组</span>
+					    	<span>未分组</span>
+					    </li>
+					</ul>
+					
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>客户</span>
+					    	<span></span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>激活状态</span>
+					    	<span></span>
+					    </li>
+					    <li class="mui-table-view-cell">
+					    	<span>设备地点</span>
+					    	<span></span>
+					    </li>
+					</ul>
+					
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>通讯设备</span>
+					    	<span>FDSH</span>
+					    </li>
+					</ul>
+					
+					<ul class="mui-table-view eachCard">
+					    <li class="mui-table-view-cell">
+					    	<span>备注</span>
+					    	<span></span>
+					    </li>
+					</ul>
+				</div>
+			</div>
+
 		</div>
 	</body>
+
 </html>

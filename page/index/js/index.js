@@ -5,12 +5,15 @@ class Index{
 	
 	init(){
 		this.initMui();
+		this.initEvent();
 	}
 	
 	initEvent(){
-		document.querySelectorAll(".mui-table-view").forEach((e)=>{
-			e.onclick = () => {
-				
+		document.querySelectorAll(".mui-table-view").forEach((i) => {
+			i.onclick = function(e){
+				mui.openWindow({
+					url:"./details.html"
+				})
 			}
 		})
 	}

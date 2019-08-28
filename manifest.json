@@ -319,7 +319,8 @@
 				],
 				"refer": [
 					"page/my/my.html",
-					"page/news/news.html"
+					"page/news/news.html",
+					"page/index/details.html"
 				],
 				"priority": 0
 			},
