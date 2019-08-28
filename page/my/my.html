@@ -2,9 +2,50 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
-	</head>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+		<link rel="stylesheet/less" type="text/css" href="less/my.less"/>
+		<script src="../../js/less.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common.js" type="text/javascript" charset="utf-8"></script>
+	</head> 
 	<body>
-		我是我的
+		<div class="mui-content my">
+			<div class="userInfo">
+				<div class="flex-j">
+					<span>
+						<img src="../../img/QRcode.png"/>
+					</span>
+					<span>
+						<img src="../../img/mysetting.png"/>
+						<img src="../../img/mynews.png"/>
+					</span>
+				</div>
+				
+				<div class="user">
+					<img src="../../img/logo.png"/>
+					<p>用户名</p>
+				</div>
+			</div>
+	        
+	        <ul class="mui-table-view eachCard">
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">
+			        	<img src="../../img/wdgd.png"/>我的工单
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">
+			        	<img src="../../img/wdbx.png"/>我的报修
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell">
+			        <a class="mui-navigate-right">
+			        	<img src="../../img/xtsz.png"/>系统设置
+			        </a>
+			    </li>
+			</ul>
+		</div>
 	</body>
 </html>

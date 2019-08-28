@@ -1,13 +1,14 @@
 {
-  "page/index/index.html": {
-    "resources": [
-      "page/baoxiu/baoxiu.html"
-    ],
-    "refer": [
-      "page/map/map.html",
-      "page/my/my.html",
-      "page/news/news.html",
-      "page/baoxiu/baoxiu.html"
-    ]
-  }
+	"page/index/index.html": {
+		"resources": [
+			"page/baoxiu/baoxiu.html",
+			"page/map/map.html"
+		],
+		"refer": [
+			"page/map/map.html",
+			"page/my/my.html",
+			"page/news/news.html",
+			"page/baoxiu/baoxiu.html"
+		]
+	}
 }

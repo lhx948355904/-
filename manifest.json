@@ -1,4 +1,4 @@
-﻿{
+{
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H51F17ED0",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "login-p",/*应用名称，程序桌面图标名称*/
@@ -39,6 +39,10 @@
     },
     "plus": {
     	"launchwebview": {
+    		"statusbar":{
+    			"immersed": true,
+    			"background":"#4495F1"
+    		},
 			"bottom": "0px",
 			"background": "#fff",
 			"subNViews": [
