@@ -339,7 +339,9 @@
 					"css/mui.min.css",
 					"js/util.js"
 				],
-				"refer": [],
+				"refer": [
+					"page/baoxiu/details.html"
+				],
 				"priority": 0
 			},
 			"page/news/news.html": {
@@ -348,7 +350,9 @@
 					"css/mui.min.css",
 					"js/util.js"
 				],
-				"refer": [],
+				"refer": [
+					"page/news/details.html"
+				],
 				"priority": 0
 			},
 			"page/my/my.html": {
@@ -357,7 +361,10 @@
 					"css/mui.min.css",
 					"js/util.js"
 				],
-				"refer": [],
+				"refer": [
+					"page/my/wdgd.html",
+					"page/my/wdbx.html"
+				],
 				"priority": 0
 			}
 		},

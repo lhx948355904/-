@@ -1,0 +1,82 @@
+@import "../../../css/common";
+
+//整个人员信息框
+div.message_person {
+    position: absolute;
+    z-index: 0;
+    width: 85%;
+    bottom: 10px;
+    left: 27px;
+    background-color: white;
+    //  border: 1px solid red;
+    p {
+        margin: 12px;
+        color: #101010;
+        font-size: 20px;
+    }
+    p:last-child {
+        font-size: 14px;
+        color: #666666;
+    }
+    img {
+        float: right;
+        margin-top: 18px;
+        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+//整个设备信息的框
+div.equipment {
+    position: absolute;
+    z-index: 0;
+    width: 85%;
+    bottom: 10px;
+    left: 27px;
+    background-color: white;
+    padding: 10px;
+    
+    img {
+        .colCenter;
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        right: 10px;
+        
+    }
+    
+    >div:nth-of-type(1){
+        .ilb;
+        width:40%;
+        
+        div:first-child,div:last-child{
+            font-weight: bold;
+            font-size: 18px;
+            color: #101010;
+        }
+        
+        div{
+            font-size: 14px;
+            color: #666;
+            margin: 4px 0;
+        }
+    }
+    
+    >div:nth-of-type(2){
+        .ilb;
+        width:40%;
+        
+        div:first-child{
+            font-size: 14px;
+            color: #666;
+            margin: 4px 0;
+        }
+        
+        div:last-child{
+            font-size: 18px;
+            margin: 4px 0;
+            color: #101010;
+        }
+    }
+}

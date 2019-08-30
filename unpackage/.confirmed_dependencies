@@ -11,5 +11,21 @@
 			"page/baoxiu/baoxiu.html",
 			"page/index/details.html"
 		]
+	},
+	"page/news/news.html": {
+		"refer": [
+			"page/news/details.html"
+		]
+	},
+	"page/baoxiu/baoxiu.html": {
+		"refer": [
+			"page/baoxiu/details.html"
+		]
+	},
+	"page/my/my.html": {
+		"refer": [
+			"page/my/wdgd.html",
+			"page/my/wdbx.html"
+		]
 	}
 }

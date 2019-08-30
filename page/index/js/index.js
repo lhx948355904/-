@@ -16,6 +16,11 @@ class Index{
 				})
 			}
 		})
+		
+		/*document.querySelector("#icon-menu").onclick = () => {
+			console.log(1)
+			mui('.mui-off-canvas-wrap').offCanvas('show');
+		}*/
 	}
 	
 	initMui(){
